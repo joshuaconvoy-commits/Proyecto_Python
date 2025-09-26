@@ -3,18 +3,8 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import os
-
-# Importar plotly con manejo de errores
-try:
-    import plotly.express as px
-    import plotly.graph_objects as go
-except ImportError:
-    st.error("Error: No se pudo importar plotly. Instalando dependencias...")
-    import subprocess
-    import sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
-    import plotly.express as px
-    import plotly.graph_objects as go
+import plotly.express as px
+import plotly.graph_objects as go
 
 pd.options.mode.chained_assignment = None  # default='warn'
 
